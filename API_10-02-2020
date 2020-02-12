@@ -1,0 +1,392 @@
+{
+	"info": {
+		"_postman_id": "eb774f67-5686-4c2a-aa31-30c5e49d5dce",
+		"name": "API copy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:5000/login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"email\":\"shiva@thbs.com\",\r\n\"password\":\"shiva_ram@thbs.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/refreshtoken",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\nemail : \"shiva_ram@thbs.com\".\npassword : \"shiva\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/refreshtoken",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"refreshtoken"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/v1/upload",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNoaXZhQHRoYnMuY29tIiwicGFzc3dvcmQiOiIkMmIkMTAkYmE3NWNxOC5FaHNFSzZNYzF2YjR5ZXM3ejZTZWZtY1pmV0c3Njl6cDNJbndxVWNqbTVGSEsiLCJpYXQiOjE1ODEzMTIyOTgsImV4cCI6MTU4MTMyMTI5OH0.knpOXd1uQLkqJ2w-COzpfLNIQEwxkh1ynEd4U8bHUyQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/Sony/Desktop/BusinessUser.xlsx"
+						},
+						{
+							"key": "fileName",
+							"value": "BusinessUser",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/v1/upload",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/v1/getCustomerList",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNoaXZhQHRoYnMuY29tIiwicGFzc3dvcmQiOiIkMmIkMTAkYmE3NWNxOC5FaHNFSzZNYzF2YjR5ZXM3ejZTZWZtY1pmV0c3Njl6cDNJbndxVWNqbTVGSEsiLCJpYXQiOjE1ODEzMTIyOTgsImV4cCI6MTU4MTMyMTI5OH0.knpOXd1uQLkqJ2w-COzpfLNIQEwxkh1ynEd4U8bHUyQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"pageNo\": \"1\",\r\n    \"size\": \"10\",\r\n    \"filter\": {\r\n        \"customercode\": \"5556656456\",\r\n            \"employeename\": \"hellsjkdhsjih214\",\r\n            \"function\": \"description\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/v1/getCustomerList",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"getCustomerList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/v1/getProductList",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNoaXZhQHRoYnMuY29tIiwicGFzc3dvcmQiOiIkMmIkMTAkYmE3NWNxOC5FaHNFSzZNYzF2YjR5ZXM3ejZTZWZtY1pmV0c3Njl6cDNJbndxVWNqbTVGSEsiLCJpYXQiOjE1ODEzMTIyOTgsImV4cCI6MTU4MTMyMTI5OH0.knpOXd1uQLkqJ2w-COzpfLNIQEwxkh1ynEd4U8bHUyQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"pageNo\": \"1\",\r\n    \"size\": \"10\",\r\n    \"filter\": {\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/v1/getProductList",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"getProductList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/v1/getBsusersList",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNoaXZhQHRoYnMuY29tIiwicGFzc3dvcmQiOiIkMmIkMTAkYmE3NWNxOC5FaHNFSzZNYzF2YjR5ZXM3ejZTZWZtY1pmV0c3Njl6cDNJbndxVWNqbTVGSEsiLCJpYXQiOjE1ODEzMTIyOTgsImV4cCI6MTU4MTMyMTI5OH0.knpOXd1uQLkqJ2w-COzpfLNIQEwxkh1ynEd4U8bHUyQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"pageNo\": \"1\",\r\n    \"size\": \"10\",\r\n    \"filter\": {\r\n        \r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/v1/getBsusersList",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"getBsusersList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"email\":\"shiva@thbs.com\",\r\n\"password\":\"shiva_ram@thbs.com\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/v1/getProductCount",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNoaXZhQHRoYnMuY29tIiwicGFzc3dvcmQiOiIkMmIkMTAkYmE3NWNxOC5FaHNFSzZNYzF2YjR5ZXM3ejZTZWZtY1pmV0c3Njl6cDNJbndxVWNqbTVGSEsiLCJpYXQiOjE1ODEzMTIyOTgsImV4cCI6MTU4MTMyMTI5OH0.knpOXd1uQLkqJ2w-COzpfLNIQEwxkh1ynEd4U8bHUyQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n   \"productgroup\": \"wooding,metal\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/v1/getProductCount",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"getProductCount"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/v1/getCustomerCount",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNoaXZhQHRoYnMuY29tIiwicGFzc3dvcmQiOiIkMmIkMTAkYmE3NWNxOC5FaHNFSzZNYzF2YjR5ZXM3ejZTZWZtY1pmV0c3Njl6cDNJbndxVWNqbTVGSEsiLCJpYXQiOjE1ODEzMTIyOTgsImV4cCI6MTU4MTMyMTI5OH0.knpOXd1uQLkqJ2w-COzpfLNIQEwxkh1ynEd4U8bHUyQ",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n   \"function\": \"description\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/v1/getCustomerCount",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"getCustomerCount"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/v1/getBusinessUserCount",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNoaXZhQHRoYnMuY29tIiwicGFzc3dvcmQiOiIkMmIkMTAkYmE3NWNxOC5FaHNFSzZNYzF2YjR5ZXM3ejZTZWZtY1pmV0c3Njl6cDNJbndxVWNqbTVGSEsiLCJpYXQiOjE1ODEzMTIyOTgsImV4cCI6MTU4MTMyMTI5OH0.knpOXd1uQLkqJ2w-COzpfLNIQEwxkh1ynEd4U8bHUyQ",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n   \"designation\": \"ram\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/v1/getBusinessUserCount",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"getBusinessUserCount"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
